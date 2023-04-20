@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stavanger Secession</title>
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
         body {
             background-color: white;
             border: 10px solid black;
@@ -13,12 +20,14 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-            margin: 0;
+            height: calc(100% - 20px);
+            box-sizing: border-box;
         }
+
         h1 {
             margin-bottom: 20px;
         }
+
         a, .date {
             display: inline-block;
             width: 50%;
