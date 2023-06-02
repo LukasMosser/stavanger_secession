@@ -4,42 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stavanger Secession</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            overflow: auto;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            border: 10px solid white;
+            box-sizing: border-box;
         }
 
         body {
-            background-image: url('stavanger_secession_background.jpg');
+            background-image: url('stavanger_secession_background.png');
             background-color: black;
             background-position: center;
             background-repeat: no-repeat;
-            border: 10px solid black;
-            font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: calc(100% - 20px);
-            box-sizing: border-box;
+            padding: 20px;
         }
-        
+
         h1 {
             margin-bottom: 20px;
         }
-        
-        a, .date {
-            display: inline-block;
-            width: 50%;
-            text-align: center;
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
             margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: 500;
+            color: white;
+            font-style: italic;
+        }
+
+        .instagram-link a {
+            font-style: normal;
+        }
+
+        .instagram-link {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
-
+    <h1>Stavanger Secession</h1>
+    <ul>
+        <li><a href="#">Event 1 - Date - Location</a></li>
+        <li><a href="#">Event 2 - Date - Location</a></li>
+        <li><a href="#">Event 3 - Date - Location</a></li>
+        <li><a href="#">Event 4 - Date - Location</a></li>
+        <li><a href="#">Event 5 - Date - Location</a></li>
+        <li><a href="#">Event 6 - Date - Location</a></li>
+        <li><a href="#">Event 7 - Date - Location</a></li>
+        <li><a href="#">Event 8 - Date - Location</a></li>
+        <li><a href="#">Event 9 - Date - Location</a></li>
+        <li><a href="#">Event 10 - Date - Location</a></li>
+    </ul>
+    <div class="instagram-link">
+        <a href="https://www.instagram.com/username/">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
 </body>
 </html>
