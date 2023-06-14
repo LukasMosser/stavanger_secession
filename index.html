@@ -70,6 +70,27 @@
                 font-size: 24px;
             }
         }
+        
+        .image-container figure img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .image-container figure img {
+                width: 100px;  /* Set fixed width */
+                height: 100px;  /* Set fixed height */
+                object-fit: contain; /* This will prevent the image from being distorted */
+            }
+        }
     </style>
 </head>
 <body>
@@ -101,22 +122,24 @@
             <i class="fab fa-instagram"></i> Instagram
         </a>
     </div>
-    <div style="display: flex; justify-content: center; align-items: center; gap: 1em; width: 100%;">
-        <figure style="width: 33%;">
-            <a href="https://www.stavanger.kommune.no/">
-                <img src="stvgkommune_sentrert_logo_neg.png" alt="Stavanger Kommune" style="width: 100%;">
-            </a>
-        </figure>
-        <figure style="width: 33%;">
-            <a href="https://www.kulturradet.no/english">
-                <img src="KR_Arts Council_Norway.png" alt="Kulturradet" style="width: 100%;">
-            </a>
-        </figure>
-        <figure style="width: 33%;">
-            <a href="https://no.ambafrance.org/">
-                <img src="EMB_Standardlogo_Paris_ENG_inv.png" alt="French Embassy in Norway" style="width: 100%;">
-            </a>
-        </figure>
+    <div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 1em; width: 100%;">
+        <div style="display: flex; justify-content: center; align-items: center; gap: 1em; width: 100%;">
+            <figure style="width: 33%;">
+                <a href="https://www.stavanger.kommune.no/">
+                    <img src="stvgkommune_sentrert_logo_neg.png" alt="Stavanger Kommune" style="width: 100%;">
+                </a>
+            </figure>
+            <figure style="width: 33%;">
+                <a href="https://www.kulturradet.no/english">
+                    <img src="KR_Arts Council_Norway.png" alt="Kulturradet" style="width: 100%;">
+                </a>
+            </figure>
+            <figure style="width: 33%;">
+                <a href="https://no.ambafrance.org/">
+                    <img src="EMB_Standardlogo_Paris_ENG_inv.png" alt="French Embassy in Norway" style="width: 100%;">
+                </a>
+            </figure>
+        </div>
     </div>
 </body>
 </html>
