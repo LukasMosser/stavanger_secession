@@ -29,11 +29,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             padding: 20px;
         }
 
         h1 {
+            margin-top: 20px;
             margin-bottom: 20px;
         }
 
@@ -61,22 +62,32 @@
             margin-top: 20px;
         }
 
-        .image-container figure img {
-            max-width: 100%;
-            height: auto;
+        .image-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around; /* Adjust spacing */
+        }
+
+        .image-container figure {
+            flex: 1; /* Makes each figure take up an equal amount of space */
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+            padding: 0 10px; /* Give each image some space */
+            text-align: center; /* Center images within their figures */
+        }
+
+        .image-container img {
+            width: 100%; /* Image will take up the full width of its parent figure */
+            height: auto; /* Keep aspect ratio */
+            max-width: initial; /* Allows image to be its natural size */
         }
 
         @media (max-width: 600px) {
-            body {
-                padding: 10px;
+            .image-container {
+                flex-direction: column;
+                align-items: center;
             }
-
-            h1, h2, p {
-                font-size: 16px;  /* Adjust size as required */
-            }
-
-            .image-container figure img {
-                object-fit: contain; /* This will prevent the image from being distorted */
+            .image-container figure {
+                margin-bottom: 20px; /* Add some space between stacked images */
             }
         }
     </style>
@@ -110,24 +121,22 @@
             <i class="fab fa-instagram"></i> Instagram
         </a>
     </div>
-    <div class="image-container" style="display: flex; justify-content: center; align-items: center; gap: 1em; width: 100%;">
-        <div style="display: flex; justify-content: center; align-items: center; gap: 1em; width: 100%;">
-            <figure style="width: 33%;">
-                <a href="https://www.stavanger.kommune.no/">
-                    <img src="stvgkommune_sentrert_logo_neg.png" alt="Stavanger Kommune" style="width: 100%;">
-                </a>
-            </figure>
-            <figure style="width: 33%;">
-                <a href="https://www.kulturradet.no/english">
-                    <img src="KR_Arts Council_Norway.png" alt="Kulturradet" style="width: 100%;">
-                </a>
-            </figure>
-            <figure style="width: 33%;">
-                <a href="https://no.ambafrance.org/">
-                    <img src="EMB_Standardlogo_Paris_ENG_inv.png" alt="French Embassy in Norway" style="width: 100%;">
-                </a>
-            </figure>
-        </div>
+    <div class="image-container">
+        <figure>
+            <a href="https://www.stavanger.kommune.no/">
+                <img src="stvgkommune_sentrert_logo_neg.png" alt="Stavanger Kommune">
+            </a>
+        </figure>
+        <figure>
+            <a href="https://www.kulturradet.no/english">
+                <img src="KR_Arts Council_Norway.png" alt="Kulturradet">
+            </a>
+        </figure>
+        <figure>
+            <a href="https://no.ambafrance.org/">
+                <img src="EMB_Standardlogo_Paris_ENG_inv.png" alt="French Embassy in Norway">
+            </a>
+        </figure>
     </div>
 </body>
 </html>
