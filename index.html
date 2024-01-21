@@ -99,9 +99,55 @@
         ul li {
             margin-bottom: 1px;
         }
+        #banner {
+            position: fixed; /* Makes the div stay in place even when scrolling */
+            top: 0px;
+            left: 0;
+            width: 100%;
+            bottom: 0px;
+            background-color: rgba(154, 157, 145, 0.95); /* Semi-transparent black background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            z-index: 1000; /* Ensures the banner is above all other content */
+        }
+
+        #banner p {
+            margin: 20px 0;
+        }
+
+        #banner button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
+    <div id="banner" style="display: none;">
+        <!-- Banner content -->
+        <p>STAVANGER SECESSION 2024</p>
+        <p>june 19 - 23, 2024</p>
+        <p>programme: coming soon</p>
+        <button onclick="hideBanner()">prologue</button>
+    </div>
+    <script>
+        window.onload = function() {
+            document.getElementById('banner').style.display = 'block';
+        };
+    
+        function hideBanner() {
+            document.getElementById('banner').style.display = 'none';
+        }
+    </script>
     <div style="text-align: left; width: 50%; margin: auto;">
         <ul>
             <li style="font-size: 24px">stavanger secession</li>
