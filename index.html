@@ -105,7 +105,12 @@
             left: 0;
             width: 100%;
             bottom: 0px;
-            background-color: rgba(154, 157, 145, 0.95); /* Semi-transparent black background */
+            background: linear-gradient(
+                to bottom, 
+                rgba(154, 157, 145, 1) 0%, 
+                rgba(154, 157, 145, 1) 20%, /* Change 50% to the desired percentage */
+                rgba(154, 157, 145, 0) 100%
+            );
             color: white;
             text-align: center;
             padding: 20px;
